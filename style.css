@@ -4,8 +4,14 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: sans-serif;
+  background-color: var(--secondary-color);
+}
+
 :root {
   --primary-color: #e3ee10;
+  --secondary-color: rgb(203, 192, 192);
 }
 
 .container {
@@ -50,4 +56,55 @@ label {
 #output {
   margin: 25px 5px;
   font-size: 30px;
+}
+
+.social-div {
+  height: 100px;
+  text-align: center;
+}
+
+.social-div p {
+  /* color: white; */
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin-left: 0px;
+}
+
+.copyright {
+  font-size: 15px;
+}
+
+footer {
+  height: 150px;
+  padding: 10px;
+  margin: 0 35px;
+  margin-top: 30px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 10px 0;
+}
+
+.link {
+  padding: 10px;
+}
+
+.img-last {
+  border-radius: 20px;
+}
+
+/* Projects style  */
+
+.project-ul {
+  list-style: none;
 }
