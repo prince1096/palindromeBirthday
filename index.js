@@ -44,6 +44,7 @@ function getAllDateFormats(date) {
 
 function checkPalindromeForDate(date) {
   let listOfPalindromes = getAllDateFormats(date);
+  // console.log(listOfPalindromes);
 
   var palindromeList = [];
 
@@ -54,6 +55,7 @@ function checkPalindromeForDate(date) {
     palindromeList.push(result);
   }
 
+  // console.log(palindromeList);
   return palindromeList;
 }
 
@@ -82,11 +84,11 @@ function getNextDate(date) {
       if (day > 29) {
         day = 1;
         month = 3;
-      } else {
-        if (day > 28) {
-          day = 1;
-          month = 3;
-        }
+      }
+    } else {
+      if (day > 28) {
+        day = 1;
+        month = 3;
       }
     }
   } else {
@@ -109,8 +111,8 @@ function getNextDate(date) {
 }
 
 function getNextpalindromeDate(date) {
-  var ctr = 0;
   var nextDate = getNextDate(date);
+  var ctr = 0;
 
   //   let isPalindromeFlag = false;
 
@@ -175,8 +177,8 @@ function getPreviousDate(date) {
 }
 
 function getPreviousPalindromeDate(date) {
-  let ctr = 0;
   let previousDate = getPreviousDate(date);
+  let ctr = 0;
 
   while (1) {
     ctr++;
@@ -194,7 +196,7 @@ function getPreviousPalindromeDate(date) {
 }
 
 function clickHandler(e) {
-  console.log();
+  // console.log();
 
   let bdayStr = dateInput.value;
 
@@ -228,8 +230,7 @@ function clickHandler(e) {
         console.log("2");
         output.innerText = `The nearest palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed by ${ctr1} days.`;
       }
-    }
-    if (isPalindrome) {
+    } else {
       console.log("3");
       output.innerText = `Yay! Your birthday is palindrome!`;
     }
