@@ -171,12 +171,14 @@ function getAllDateFormats(dateStr) {
   let mmddyy = dateStr.month + dateStr.day + dateStr.year.slice(-2);
   let yymmdd = dateStr.year.slice(-2) + dateStr.month + dateStr.day;
 
+  // console.log(ddmmyyyy, mmddyyyy, yyyymmdd, ddmmyy, mmddyy, yymmdd);
+
   return [ddmmyyyy, mmddyyyy, yyyymmdd, ddmmyy, mmddyy, yymmdd];
 }
 
 function checkPalindromeForDate(date) {
   let listOfPalindromes = getAllDateFormats(date);
-  // console.log(listOfPalindromes);
+  console.log(listOfPalindromes);
 
   var palindromeList = [];
 
