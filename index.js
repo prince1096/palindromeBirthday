@@ -178,7 +178,7 @@ function getAllDateFormats(dateStr) {
 
 function checkPalindromeForDate(date) {
   let listOfPalindromes = getAllDateFormats(date);
-  console.log(listOfPalindromes);
+  // console.log(listOfPalindromes);
 
   var palindromeList = [];
 
